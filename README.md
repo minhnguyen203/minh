@@ -1,2 +1,0 @@
-# minh
-code vd
