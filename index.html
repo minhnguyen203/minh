@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí thông tin người dùng</title>
+    <link rel="stylesheet" href="body.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+           <img src="https://symbols.vn/wp-content/uploads/2021/10/Tuong-Ryoma-lam-anh-nen-LQ.jpg" alt="">
+        </header>
+        <main>
+            <h1>Đăng kí thông tin người dùng</h1>
+            <form id="userForm">
+                <div class="form-group">
+                    <label for="fullName">Họ và tên *</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Số điện thoại *</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label>Giới tính *</label>
+                    <div>
+                        <label><input type="radio" name="gender" value="Nam" required> Nam</label>
+                        <label><input type="radio" name="gender" value="Nữ" required> Nữ</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="hobbies">Sở thích</label>
+                    <input type="text" id="hobbies">
+                </div>
+                <div class="form-group">
+                    <label for="introduction">Giới thiệu bản thân</label>
+                    <textarea id="introduction"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="gpa">Thang điểm *</label>
+                    <input type="number" id="gpa" step="0.01" required>
+                </div>
+                <button type="submit">Đăng ký</button>
+            </form>
+            <div id="userInfo" class="hidden">
+                <h2>Thông tin người dùng</h2>
+                <p><strong>Họ và tên:</strong> <span id="infoFullName"></span></p>
+                <p><strong>Email:</strong> <span id="infoEmail"></span></p>
+                <p><strong>Số điện thoại:</strong> <span id="infoPhone"></span></p>
+                <p><strong>Giới tính:</strong> <span id="infoGender"></span></p>
+                <p><strong>Sở thích:</strong> <span id="infoHobbies"></span></p>
+                <p><strong>Giới thiệu bản thân:</strong> <span id="infoIntroduction"></span></p>
+            </div>
+            
+        </main>
+        
+        <footer>
+            <p>Tên sinh viên</p>
+        </footer>
+        
+    </div>
+    <script src="script.js"></script>
+    <footer id="footer">
+        <div class="footer-wrapper">
+            <div class="row" style="margin:0;">
+                <div class="col-sm-2 text" style="text-align:right">
+                    Đang online<br /><span style="color:red;font-weight:bold">214 </span>
+                
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer>
+        <p>Sinh viên: Le Van MInh</p>
+        <p>Email: minh0355@gmail.com</p>
+        <p>Lớp:T2305M</p>
+    </footer>
+</body>
+</html>
