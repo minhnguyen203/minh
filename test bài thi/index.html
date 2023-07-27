@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cổng đăng kí thông tin người dùng</title>
+    <link rel="stylesheet" href="body.css">
+</head>
+<body>
+    <header>    
+        <nav class="navbar navbar-default" style="background-color:#fff;">
+            <a class="navbar-brand" href="/">
+                
+            </a>
+            <h1 class="pull-left" style="margin:0; color:#111211; text-transform:uppercase; line-height:80px;">Cổng đăng kí thông tin người dùng</h1>
+        </nav>
+    </header>
+    <div class="col-xs-12" style="margin-top:20px;">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-8">
+                <div style="background-color: #da674a; padding: 2px 10px; ">
+                  </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <!-- Form đăng nhập đã có -->
+                <!-- Thêm form đăng ký thông tin người dùng -->
+                <h4>Đăng ký thông tin người dùng</h4>
+                <form id="userForm">
+                    <div class="form-group">
+                        <label for="fullName">Họ và tên *</label>
+                        <input type="text" id="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Số điện thoại *</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Giới tính *</label>
+                        <div>
+                            <label><input type="radio" name="gender" value="Nam" required> Nam</label>
+                            <label><input type="radio" name="gender" value="Nữ" required> Nữ</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="hobbies">Sở thích</label>
+                        <input type="text" id="hobbies">
+                    </div>
+                    <div class="form-group">
+                        <label for="introduction">Giới thiệu bản thân</label>
+                        <textarea id="introduction"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="gpa">Thang điểm *</label>
+                        <input type="number" id="gpa" step="0.01" required>
+                    </div>
+                    <button type="submit">Đăng ký</button>
+                </form>
+                <!-- Phần hiển thị thông tin người dùng -->
+                <div id="userInfo" class="hidden">
+                    <h2>Thông tin người dùng</h2>
+                    <p><strong>Họ và tên:</strong> <span id="infoFullName"></span></p>
+            
+                    <p><strong>Email:</strong> <span id="infoEmail"></span></p>
+                    <p><strong>Số điện thoại:</strong> <span id="infoPhone"></span></p>
+                    <p><strong>Giới tính:</strong> <span id="infoGender"></span></p>
+                    <p><strong>Sở thích:</strong> <span id="infoHobbies"></span></p>
+                    <p><strong>Giới thiệu bản thân:</strong> <span id="infoIntroduction"></span></p>
+                    <p><strong>Thang điểm:</strong> <span id="infoGPA"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="footer-wrapper">
+            <div class="row" style="margin:0;">
+                <div class="col-sm-2 text" style="text-align:right">
+                    Đang online<br /><span style="color:red;font-weight:bold">214 </span>
+                
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
