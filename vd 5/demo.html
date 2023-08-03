@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body>
+    <h1 style="color: #236773;">
+    CodeLean.vn
+</h1>
+<h3>
+    Filtering input text ng-repeat
+    values accrding to ng-model
+</h3>
+<div ng-app="app1" ng-controller="controller1">
+    <p>
+        Type a programming language
+        name in input field:
+    </p>
+    <p>
+        <input type="text" ng-model="testfilter">
+    </p>
+    <p>
+        Filter show the names of only the
+        mattching programming language after
+        capitalizing each language by
+        applying filter
+    </p>
+    <ul>
+        <li ng-repeat="x in programminglanguagenames| filter:testfilter">
+            {{ x | myfilter }}
+        </li>
+    </ul>
+</div>
+
+<script>
+    var app = angular.module('app1', []);
+    app.filter('myfilter', function () {
+        return function (x) {
+            var i, c, txt = "";
+            for (i = 0; i < x.length; i++) { 
+                c = x[i];
+                c = c.toUpperCase(); 
+                txt += c;
+            }
+            return txt;
+        };
+    });
+
+    app.controller('controller1', function ($scope) {
+        $scope.programminglanguagenames = [
+            'cobol',
+            'pascal',
+            'ruby',
+            'php',
+            'perl',
+            'python',
+            'c',
+            'c++',
+            'java',
+            'html',
+            'css',
+            'javascript',
+            'basic',
+            'lisp',
+            'smalltalk',
+            'bootstrap'
+        ];
+    });
+</script>
